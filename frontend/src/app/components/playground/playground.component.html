@@ -1,1 +1,27 @@
-<p>playground.component works!</p>
+@if (vulnerability) {
+  <div class="p-4 h-100">
+    <h4 class="mb-4">Playground</h4>
+    <div class="playground-content">
+      @switch (vulnerability.id) {
+        @case ('template') {
+          <div>
+            <p class="text-muted">Template playground content goes here.</p>
+            <!-- Add template-specific playground features -->
+          </div>
+        }
+        <!-- Add more vulnerability-specific playground content -->
+        <!-- @case ('Improper-Neutralization-of-Special-Elements-used-in-an-SQL-Command') {
+          <div>SQL Injection playground</div>
+        } -->
+        <!-- @case ('Improper-Neutralization-of-Input-During-Web-Page-Generation') {
+          <div>XSS playground</div>
+        } -->
+        @default {
+          <div>
+            <p class="text-muted">Playground content for this vulnerability is not yet implemented.</p>
+          </div>
+        }
+      }
+    </div>
+  </div>
+}

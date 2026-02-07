@@ -8,6 +8,13 @@ export interface vulnerability {
 
 export const vulnerabilities: vulnerability[] = [
     {
+        id: "template",
+        title: "Template Vulnerability",
+        name: "Template Vulnerability",
+        description: "This is a template vulnerability for testing purposes.",
+        link: "https://cwe.mitre.org/"
+    },
+    {
         id: "Improper-Neutralization-of-Input-During-Web-Page-Generation",
         title: "Cross-site Scripting",
         name: "Improper Neutralization of Input During Web Page Generation",
